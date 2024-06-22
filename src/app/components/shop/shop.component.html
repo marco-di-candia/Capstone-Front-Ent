@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h2>Shopping Cart</h2>
+  <div *ngIf="shopList.length > 0; else emptyCart">
+    <div *ngFor="let shop of shopList" class="shop-item">
+      <div class="row">
+        <div class="col-md-3">
+          <img [src]="shop.imageUrl" class="card-img-top" alt="{{ shop.name }}">
+        </div>
+        <div class="col-md-6">
+          <div class="shop-details">
+            <h3 class="shop-name">{{ shop.name }}</h3>
+            <p class="shop-price">Price: ${{ shop.price ? shop.price.toFixed(2) : '0.00' }}</p>
+            <p class="shop-amount">Amount: {{ shop.amount }}</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <button (click)="onDeleteClick(shop.id)" class="btn btn-danger">Remove</button>
+        </div>
+      </div>
+      <hr>
+    </div>
+     <!-- Link per il checkout -->
+     <div class="text-center">
+      <a routerLink="/checkout" class="btn btn-primary">Checkout</a>
+    </div>
+  </div>
+  <ng-template #emptyCart>
+    <p>Your shopping cart is empty.</p>
+  </ng-template>
+  <p>Total: ${{ cartTotal.toFixed(2) }}</p>
+</div>
