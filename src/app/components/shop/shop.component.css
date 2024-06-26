@@ -1,0 +1,5 @@
+.small-image {
+    max-width: 100px; /* Imposta la larghezza massima delle immagini a 100px */
+    height: auto;    /* Mantiene il rapporto d'aspetto originale */
+  }
+  

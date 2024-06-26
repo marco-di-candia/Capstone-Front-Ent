@@ -1,0 +1,12 @@
+.img-container {
+    width: 100%;
+    height: 80vh; /* Altezza del contenitore impostata a metà della viewport height */
+    overflow: hidden; /* Nasconde eventuali parti dell'immagine che escono dal contenitore */
+}
+
+.custom-img {
+    width: 100%;
+    height: auto;
+    max-height: 100%; /* Imposta l'altezza massima dell'immagine per essere al 100% del contenitore */
+    object-fit: cover; /* Assicura che l'immagine copra il contenitore mantenendo le proporzioni */
+}

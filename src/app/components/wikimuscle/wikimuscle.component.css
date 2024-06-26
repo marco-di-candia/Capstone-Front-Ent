@@ -1,0 +1,107 @@
+nav {
+  background-image: url("/assets/img/workout-limitless-endurance-gym-colorful-smoke-3556x2000-929.jpg") !important;
+  background-position: 0% 20% ;
+  padding: 10px 0;
+}
+
+.nav-link{
+  color: rgba(245, 245, 245, 0.567) !important;
+}
+.nav-link:hover{
+  color: white !important;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+#content {
+  padding: 20px 0;
+}
+
+.exercise-section {
+  margin-bottom: 40px;
+}
+
+.exercise-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.exercise-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.exercise-section ul li {
+  margin-bottom: 5px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  width: calc(33.33% - 10px);
+  margin-right: 10px;
+}
+
+.video-container {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    flex-wrap: wrap;
+  }
+  .image-container img {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+/* go top */
+#backToTopBtn {
+  display: none; /* Nascondi il tasto per impostazione predefinita */
+  position: fixed; /* Fissa il tasto in basso a destra */
+  bottom: 20px; /* Distanza dal bordo inferiore della pagina */
+  right: 30px; /* Distanza dal bordo destro della pagina */
+  z-index: 99; /* Assicurati che il tasto sia sopra altri elementi */
+  font-size: 18px; /* Dimensione del testo */
+  border: none; /* Nessun bordo */
+  outline: none; /* Nessun contorno */
+  background-color: #000; /* Colore di sfondo */
+  color: white; /* Colore del testo */
+  cursor: pointer; /* Puntatore del mouse */
+  padding: 15px; /* Spazio interno */
+  border-radius: 10px; /* Angoli arrotondati */
+}
+
+#backToTopBtn:hover {
+  background-color: #555; /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+.img-container {
+  width: 100%;
+  height: 90vh; /* Altezza del contenitore impostata a metà della viewport height */
+  overflow: hidden; /* Nasconde eventuali parti dell'immagine che escono dal contenitore */
+}
+
+.custom-img {
+  width: 100%;
+  height: auto;
+  max-height: 100%; /* Imposta l'altezza massima dell'immagine per essere al 100% del contenitore */
+  object-fit: cover; /* Assicura che l'immagine copra il contenitore mantenendo le proporzioni */
+}

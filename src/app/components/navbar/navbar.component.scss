@@ -1,4 +1,49 @@
  .img-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+}
+.navbar-nav {
+    flex-direction: row; /* Assicura che gli elementi siano allineati orizzontalmente */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px; /* Spazio tra gli elementi del menu */
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0; /* Rimuove lo spazio dopo l'ultimo elemento del menu */
+}
+
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center; /* Centra verticalmente il testo con l'icona */
+}
+
+.d-flex {
+    display: flex;
+    align-items: center; /* Centra verticalmente gli elementi */
+}
+
+/* Stili specifici per l'icona del carrello */
+.bi-cart {
+    margin-right: 5px; /* Spazio tra l'icona del carrello e il testo */
+}
+
+
+.color{
+    background-image: url("/assets/img/workout-limitless-endurance-gym-colorful-smoke-3556x2000-929.jpg") !important;
+    background-position: 0% 20% ;
+}
+.color-text{
+    color: rgba(245, 245, 245, 0.567) !important;
+}
+.color-text:hover {
+    color: white !important;
+}
+.btn-outline-dark {
+    color: rgba(245, 245, 245, 0.8) !important; /* Cambia colore del testo del pulsante logout */
+    border-color: rgba(245, 245, 245, 0.8) !important; /* Cambia colore del bordo del pulsante logout */
+}
+.color-text-1 {
+    color: rgba(245, 245, 245, 0.567) !important;
 }

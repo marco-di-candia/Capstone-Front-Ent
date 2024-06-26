@@ -16,6 +16,7 @@ import { ShopComponent } from './components/shop/shop.component';
 import { CheckoutComponentComponent } from './components/checkout-component/checkout-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckoutSuccessModalComponent } from './components/checkout-success-modal/checkout-success-modal.component';
+import { WikimuscleComponent } from './components/wikimuscle/wikimuscle.component';
 
 
 const routes: Route[] = [
@@ -23,9 +24,10 @@ const routes: Route[] = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'products', component: ShopPageComponent },
-  { path: 'shop', component: ShopComponent },
+  { path: 'cart', component: ShopComponent },
   { path: 'checkout', component: CheckoutComponentComponent },
   { path: 'confirmation', component: CheckoutSuccessModalComponent },
+  { path: 'WikiMuscle', component: WikimuscleComponent },
 ];
 
 @NgModule({
@@ -39,6 +41,7 @@ const routes: Route[] = [
     ShopComponent,
     CheckoutComponentComponent,
     CheckoutSuccessModalComponent,
+    WikimuscleComponent,
 
   ],
   imports: [
