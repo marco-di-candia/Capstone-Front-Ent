@@ -1,7 +1,8 @@
 .img-container {
-    width: 100%;
+    width: 90%;
     height: 80vh; /* Altezza del contenitore impostata a metà della viewport height */
     overflow: hidden; /* Nasconde eventuali parti dell'immagine che escono dal contenitore */
+    margin: 0 auto; /* Centra la navbar orizzontalmente */
 }
 
 .custom-img {

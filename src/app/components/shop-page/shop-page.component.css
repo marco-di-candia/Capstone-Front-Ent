@@ -3,5 +3,11 @@
     height: auto; /* Mantiene le proporzioni dell'immagine */
     max-height: 200px; /* Imposta l'altezza massima dell'immagine */
     object-fit: contain; /* Contiene l'immagine all'interno dell'area specificata senza ritagliarla */
+    width: 80%;
+    margin: 0 auto; /* Centra la navbar orizzontalmente */
+  }
+  .bg-butt{
+    background-image: url("/assets/img/workout-limitless-endurance-gym-colorful-smoke-3556x2000-929.jpg") !important;
+    background-position: 0% 20%;
   }
   
