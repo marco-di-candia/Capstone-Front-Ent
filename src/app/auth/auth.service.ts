@@ -1,3 +1,4 @@
+// auth.service.ts
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
@@ -10,57 +11,52 @@ import { SignUp } from '../interfaces/sign-up';
   providedIn: 'root'
 })
 export class AuthService {
-
-  apiURL = "http://localhost:8080/auth/"
-  jwtHelper = new JwtHelperService
-  private authSub = new BehaviorSubject<AuthData | null>(null)
+  apiURL = "http://localhost:8080/auth/";
+  jwtHelper = new JwtHelperService();
+  private authSub = new BehaviorSubject<AuthData | null>(null);
   user$ = this.authSub.asObservable();
   timeout: any;
 
   constructor(private http: HttpClient, private router: Router) {
-    this.restore(); // Ripristino automatico dell'autenticazione al caricamento del servizio
+    this.restore(); // Restore authentication on service load
   }
 
   signup(data: SignUp) {
-    return this.http.post(`${this.apiURL}signup`, data, { responseType: 'text' })
+    return this.http.post(`${this.apiURL}signup`, data, { responseType: 'text' });
   }
 
   login(data: { email: string, password: string }) {
     return this.http.post<AuthData>(`${this.apiURL}login`, data).pipe(
       tap((data) => {
-        alert('Login effettuato.');
+        alert('Login successful.');
         console.log('auth data: ', data);
-        // Naviga verso la pagina 'home' dopo il login
-        this.router.navigate(['/']);
-      }),
-      tap((data) => {
         this.authSub.next(data);
         localStorage.setItem('user', JSON.stringify(data));
         this.autologout(data);
+        this.router.navigate(['/']); // Navigate to home page after login
       }),
       catchError(this.errors)
     );
   }
+
   private errors(err: any) {
-    console.log(err.error)
+    console.log(err.error);
     switch (err.error) {
       case 'Email already exists':
-        return throwError('utente già presente');
-        break;
+        return throwError('User already exists');
       case 'Incorrect password':
-        return throwError('password errata');
-        break;
+        return throwError('Incorrect password');
       case 'Cannot find user':
-        return throwError('utente inesistente')
+        return throwError('User not found');
       default:
-        return throwError('errore generico')
+        return throwError('General error');
     }
   }
 
   logout() {
     this.authSub.next(null);
     localStorage.removeItem('user');
-    this.router.navigate(['/login'])
+    this.router.navigate(['/login']);
   }
 
   restore() {
@@ -94,5 +90,4 @@ export class AuthService {
       this.logout();
     }
   }
-
 }

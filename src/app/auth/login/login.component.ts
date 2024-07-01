@@ -1,7 +1,10 @@
+// login.component.ts
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +12,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  errorMessage: string = '';
+
   constructor(private authSrv: AuthService, private router: Router) { }
 
   login(form: NgForm) {
-    try {
-      this.authSrv.login(form.value).subscribe();
-      this.router.navigate(['/'])
-    } catch (error) {
-      console.error(error)
-      return
+    if (form.invalid) {
+      return;
     }
+
+    this.authSrv.login(form.value).pipe(
+      catchError(error => {
+        this.errorMessage = error; // Display error message
+        return throwError(error);
+      })
+    ).subscribe(response => {
+      // Redirect to home page on successful login
+      this.router.navigate(['/']);
+    });
   }
 }

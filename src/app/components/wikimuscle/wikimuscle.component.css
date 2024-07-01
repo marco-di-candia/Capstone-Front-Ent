@@ -4,6 +4,7 @@ nav {
   padding: 10px 0;
   width: 90%;
   margin: 0 auto;
+  /* top: 10px; */
   /* Centra la navbar orizzontalmente */
 }
 
@@ -78,41 +79,26 @@ nav ul li {
     margin-right: 0;
   }
 }
-
-/* go top */
-#backToTopBtn {
+/* styles.css (o nel tuo file di stili specifico per il componente) */
+.scroll-top-btn {
   display: none;
-  /* Nascondi il tasto per impostazione predefinita */
   position: fixed;
-  /* Fissa il tasto in basso a destra */
   bottom: 20px;
-  /* Distanza dal bordo inferiore della pagina */
-  right: 30px;
-  /* Distanza dal bordo destro della pagina */
-  z-index: 99;
-  /* Assicurati che il tasto sia sopra altri elementi */
-  font-size: 18px;
-  /* Dimensione del testo */
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  /* Nessun bordo */
-  outline: none;
-  /* Nessun contorno */
-  background-color: #000;
-  /* Colore di sfondo */
-  color: white;
-  /* Colore del testo */
+  border-radius: 5px;
   cursor: pointer;
-  /* Puntatore del mouse */
-  padding: 15px;
-  /* Spazio interno */
-  border-radius: 10px;
-  /* Angoli arrotondati */
+  z-index: 1000; /* Assicura che il pulsante sia sopra gli altri elementi */
 }
 
-#backToTopBtn:hover {
-  background-color: #555;
-  /* Cambia il colore di sfondo al passaggio del mouse */
+.scroll-top-btn:hover {
+  background-color: #0056b3;
 }
+
+
 
 .img-container {
   width: 100%; /* Ensures the container takes full width of its parent */

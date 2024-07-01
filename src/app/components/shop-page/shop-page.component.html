@@ -1,20 +1,14 @@
-<!-- <div class="img-container">
-  <img src="assets/img/1000_F_315418145_Qne6Ff0G9BfCq4humspNaO5dck46Wu8m.jpg" class="img-fluid custom-img" alt="">
-</div> -->
-
 <div class="container mt-4">
   <h2 class="text-white mb-4">Our Products</h2>
   <div class="row">
     <div *ngFor="let product of arrayProduct" class="col-md-4">
       <div class="card mb-4 shadow-sm rounded-5">
-        <!-- Aggiungi una classe personalizzata per l'immagine -->
         <img [src]="product.imageUrl" class="card-img-top img-fluid product-img rounded-5" alt="{{ product.name }}">
         <div class="card-body">
           <h5 class="card-title">{{ product.name }}</h5>
           <p class="card-text">{{ product.description }}</p>
           <p class="card-text"><strong>Price: ${{ product.price }}</strong></p>
-          <!-- Aggiungi il pulsante "Add to Cart" -->
-          <button (click)="addToCart(product)" class="btn btn-primary bg-butt">Add to Cart</button>
+          <button (click)="addToCart(product)" [class]="buttonClasses[product.id]">{{ buttonTexts[product.id] }}</button>
         </div>
       </div>
     </div>
