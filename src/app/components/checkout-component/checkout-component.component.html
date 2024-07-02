@@ -1,5 +1,5 @@
-<div class="container mt-4">
-    <h2>Shipping Information</h2>
+<div class="container mt-4 bg-white rounded-5 p-5">
+    <h2 class="p-4">Shipping Information</h2>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <!-- Shipping Information Section -->
         <div class="mb-3">
@@ -70,7 +70,7 @@
         </div>
 
         <!-- Credit Card Information Section -->
-        <h2>Credit Card Information</h2>
+        <h2 class="p-4">Credit Card Information</h2>
         <div class="mb-3">
             <label for="cardHolderName" class="form-label">Cardholder Name</label>
             <input type="text" class="form-control" id="cardHolderName" formControlName="cardHolderName">

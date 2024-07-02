@@ -52,3 +52,7 @@
 .color-text-1 {
     color: rgba(245, 245, 245, 0.567) !important;
 }
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}

@@ -25,11 +25,9 @@
           </svg>
           <input type="password" id="password" name="password" class="input" placeholder="Enter your Password" ngModel required>
         </div>
-  
-        <div *ngIf="errorMessage" class="text-danger text-center">
+        <div *ngIf="errorMessage" class="alert alert-danger mt-3">
           {{ errorMessage }}
         </div>
-  
         <div class="d-flex justify-content-center mt-4 mb-1">
           <button type="submit" [disabled]="loginForm.invalid" class="btn btn-outline-secondary w-50 m-auto">Accedi</button>
         </div>

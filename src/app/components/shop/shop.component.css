@@ -2,4 +2,8 @@
     max-width: 100px; /* Imposta la larghezza massima delle immagini a 100px */
     height: auto;    /* Mantiene il rapporto d'aspetto originale */
   }
-  
+  .bg-cos{
+    background-color: whitesmoke;
+    box-shadow: inset 7px 7px 100px #dcdcdc,
+            inset -7px -7px 100px #e4e4e4;
+  }

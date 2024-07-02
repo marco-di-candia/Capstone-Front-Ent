@@ -28,7 +28,6 @@ export class AuthService {
   login(data: { email: string, password: string }) {
     return this.http.post<AuthData>(`${this.apiURL}login`, data).pipe(
       tap((data) => {
-        alert('Login successful.');
         console.log('auth data: ', data);
         this.authSub.next(data);
         localStorage.setItem('user', JSON.stringify(data));

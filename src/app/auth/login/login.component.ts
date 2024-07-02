@@ -1,4 +1,3 @@
-// login.component.ts
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { NgForm } from '@angular/forms';
@@ -23,7 +22,7 @@ export class LoginComponent {
 
     this.authSrv.login(form.value).pipe(
       catchError(error => {
-        this.errorMessage = error; // Display error message
+        this.errorMessage = 'Invalid email or password'; // Set error message
         return throwError(error);
       })
     ).subscribe(response => {
