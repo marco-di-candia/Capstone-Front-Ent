@@ -102,7 +102,7 @@ nav ul li {
 
 .img-container {
   width: 100%; /* Ensures the container takes full width of its parent */
-  height: 60vh; /* Adjust the height as needed */
+  height: 80vh; /* Adjust the height as needed */
   overflow: hidden;
   display: flex;
   justify-content: center;

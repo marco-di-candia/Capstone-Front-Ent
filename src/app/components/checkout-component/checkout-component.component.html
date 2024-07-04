@@ -1,109 +1,109 @@
 <div class="container mt-4 bg-white rounded-5 p-5">
-    <h2 class="p-4">Shipping Information</h2>
+    <h2 class="p-4">Informazioni sulla spedizione</h2>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <!-- Shipping Information Section -->
+        <!-- Sezione Informazioni sulla Spedizione -->
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" formControlName="email">
             <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)" class="text-danger">
                 <small *ngIf="form.get('email')?.errors?.['required']">
-                    Email is required.
+                    L'email è obbligatoria.
                 </small>
                 <small *ngIf="form.get('email')?.errors?.['email']">
-                    Please enter a valid email address.
+                    Inserisci un indirizzo email valido.
                 </small>
             </div>
         </div>
 
         <div class="mb-3">
-            <label for="fullName" class="form-label">Full Name</label>
+            <label for="fullName" class="form-label">Nome Completo</label>
             <input type="text" class="form-control" id="fullName" formControlName="fullName">
             <div *ngIf="form.get('fullName')?.invalid && (form.get('fullName')?.dirty || form.get('fullName')?.touched)" class="text-danger">
                 <small *ngIf="form.get('fullName')?.errors?.['required']">
-                    Full Name is required.
+                    Il nome completo è obbligatorio.
                 </small>
             </div>
         </div>
 
         <div class="mb-3">
-            <label for="address" class="form-label">Address</label>
+            <label for="address" class="form-label">Indirizzo</label>
             <input type="text" class="form-control" id="address" formControlName="address">
             <div *ngIf="form.get('address')?.invalid && (form.get('address')?.dirty || form.get('address')?.touched)" class="text-danger">
                 <small *ngIf="form.get('address')?.errors?.['required']">
-                    Address is required.
+                    L'indirizzo è obbligatorio.
                 </small>
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-md-6">
-                <label for="city" class="form-label">City</label>
+                <label for="city" class="form-label">Città</label>
                 <input type="text" class="form-control" id="city" formControlName="city">
                 <div *ngIf="form.get('city')?.invalid && (form.get('city')?.dirty || form.get('city')?.touched)" class="text-danger">
                     <small *ngIf="form.get('city')?.errors?.['required']">
-                        City is required.
+                        La città è obbligatoria.
                     </small>
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="postalCode" class="form-label">Postal Code</label>
+                <label for="postalCode" class="form-label">Codice Postale</label>
                 <input type="text" class="form-control" id="postalCode" formControlName="postalCode">
                 <div *ngIf="form.get('postalCode')?.invalid && (form.get('postalCode')?.dirty || form.get('postalCode')?.touched)" class="text-danger">
                     <small *ngIf="form.get('postalCode')?.errors?.['required']">
-                        Postal Code is required.
+                        Il codice postale è obbligatorio.
                     </small>
                     <small *ngIf="form.get('postalCode')?.errors?.['pattern']">
-                        Postal Code must be a 5-digit number.
+                        Il codice postale deve essere un numero di 5 cifre.
                     </small>
                 </div>
             </div>
         </div>
 
         <div class="mb-3">
-            <label for="country" class="form-label">Country</label>
+            <label for="country" class="form-label">Paese</label>
             <input type="text" class="form-control" id="country" formControlName="country">
             <div *ngIf="form.get('country')?.invalid && (form.get('country')?.dirty || form.get('country')?.touched)" class="text-danger">
                 <small *ngIf="form.get('country')?.errors?.['required']">
-                    Country is required.
+                    Il paese è obbligatorio.
                 </small>
             </div>
         </div>
 
-        <!-- Credit Card Information Section -->
-        <h2 class="p-4">Credit Card Information</h2>
+        <!-- Sezione Informazioni sulla Carta di Credito -->
+        <h2 class="p-4">Informazioni sulla Carta di Credito</h2>
         <div class="mb-3">
-            <label for="cardHolderName" class="form-label">Cardholder Name</label>
+            <label for="cardHolderName" class="form-label">Nome del Titolare della Carta</label>
             <input type="text" class="form-control" id="cardHolderName" formControlName="cardHolderName">
             <div *ngIf="form.get('cardHolderName')?.invalid && (form.get('cardHolderName')?.dirty || form.get('cardHolderName')?.touched)" class="text-danger">
                 <small *ngIf="form.get('cardHolderName')?.errors?.['required']">
-                    Cardholder Name is required.
+                    Il nome del titolare della carta è obbligatorio.
                 </small>
             </div>
         </div>
 
         <div class="mb-3">
-            <label for="cardNumber" class="form-label">Card Number</label>
+            <label for="cardNumber" class="form-label">Numero della Carta</label>
             <input type="text" class="form-control" id="cardNumber" formControlName="cardNumber">
             <div *ngIf="form.get('cardNumber')?.invalid && (form.get('cardNumber')?.dirty || form.get('cardNumber')?.touched)" class="text-danger">
                 <small *ngIf="form.get('cardNumber')?.errors?.['required']">
-                    Card Number is required.
+                    Il numero della carta è obbligatorio.
                 </small>
                 <small *ngIf="form.get('cardNumber')?.errors?.['pattern']">
-                    Card Number must be a 16-digit number.
+                    Il numero della carta deve essere un numero di 16 cifre.
                 </small>
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-md-6">
-                <label for="expiryDate" class="form-label">Expiry Date</label>
-                <input type="text" class="form-control" id="expiryDate" formControlName="expiryDate" placeholder="MM/YYYY">
+                <label for="expiryDate" class="form-label">Data di Scadenza</label>
+                <input type="text" class="form-control" id="expiryDate" formControlName="expiryDate" placeholder="MM/AAAA">
                 <div *ngIf="form.get('expiryDate')?.invalid && (form.get('expiryDate')?.dirty || form.get('expiryDate')?.touched)" class="text-danger">
                     <small *ngIf="form.get('expiryDate')?.errors?.['required']">
-                        Expiry Date is required.
+                        La data di scadenza è obbligatoria.
                     </small>
                     <small *ngIf="form.get('expiryDate')?.errors?.['pattern']">
-                        Expiry Date must be in MM/YYYY format.
+                        La data di scadenza deve essere nel formato MM/AAAA.
                     </small>
                 </div>
             </div>
@@ -112,17 +112,17 @@
                 <input type="text" class="form-control" id="cvv" formControlName="cvv">
                 <div *ngIf="form.get('cvv')?.invalid && (form.get('cvv')?.dirty || form.get('cvv')?.touched)" class="text-danger">
                     <small *ngIf="form.get('cvv')?.errors?.['required']">
-                        CVV is required.
+                        Il CVV è obbligatorio.
                     </small>
                     <small *ngIf="form.get('cvv')?.errors?.['pattern']">
-                        CVV must be a 3-digit number.
+                        Il CVV deve essere un numero di 3 cifre.
                     </small>
                 </div>
             </div>
         </div>
 
         <!-- Aggiunto routerLink condizionale -->
-        <a *ngIf="form.valid" routerLink="/confirmation" class="btn btn-primary">Submit Order</a>
-        <button *ngIf="!form.valid" type="submit" class="btn btn-primary" [disabled]="true">Submit Order</button>
+        <a *ngIf="form.valid" routerLink="/confirmation" class="btn btn-primary">Invia Ordine</a>
+        <button *ngIf="!form.valid" type="submit" class="btn btn-primary" [disabled]="true">Invia Ordine</button>
     </form>
 </div>

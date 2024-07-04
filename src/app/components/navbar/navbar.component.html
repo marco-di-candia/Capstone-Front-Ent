@@ -14,7 +14,7 @@
                        [routerLinkActiveOptions]="{ exact: true }">Home</a>
                 </li>
                 <li class="nav-item" [attr.data-bs-toggle]="!user ? 'tooltip' : null" [attr.title]="!user ? 'Please register to view' : null">
-                    <a [class.disabled]="!user" class="nav-link color-text" [routerLink]="user ? ['/products'] : null" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Products</a>
+                    <a [class.disabled]="!user" class="nav-link color-text" [routerLink]="user ? ['/products'] : null" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Prodotti</a>
                 </li>
                 <li class="nav-item" [attr.data-bs-toggle]="!user ? 'tooltip' : null" [attr.title]="!user ? 'Please register to view' : null">
                     <a [class.disabled]="!user" class="nav-link color-text" [routerLink]="user ? ['/WikiMuscle'] : null" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">WikiMuscle</a>
@@ -26,7 +26,7 @@
         <div class="d-flex align-items-center mx-auto">
             <p *ngIf="user" class="color-text-1 mx-3 mt-3"><i class="bi bi-person-circle pt-4"></i>&nbsp;{{ user.user.name }}</p>
             <a *ngIf="user" class="nav-link color-text" [routerLink]="['/cart']" routerLinkActive="active">
-                <i class="bi bi-cart"></i> Cart
+                <i class="bi bi-cart"></i> Carello
             </a>
         </div>
 

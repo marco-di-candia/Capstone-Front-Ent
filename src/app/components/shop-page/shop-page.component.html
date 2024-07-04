@@ -1,5 +1,9 @@
+<div class="img-container">
+  <img class="img-fluid custom-img" src="assets/img/int-3-1280x720 (1).jpeg" alt="">
+</div>
+
 <div class="container mt-4">
-  <h2 class="text-white mb-4">Our Products</h2>
+  <h2 class="text-white mb-4">Prodotti</h2>
   <div class="row">
     <div *ngFor="let product of arrayProduct" class="col-md-4">
       <div class="card mb-4 shadow-sm rounded-5">
@@ -7,7 +11,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ product.name }}</h5>
           <p class="card-text">{{ product.description }}</p>
-          <p class="card-text"><strong>Price: ${{ product.price }}</strong></p>
+          <p class="card-text"><strong>Prezzo: ${{ product.price }}</strong></p>
           <button (click)="addToCart(product)" [class]="buttonClasses[product.id]">{{ buttonTexts[product.id] }}</button>
         </div>
       </div>

@@ -10,4 +10,21 @@
     background-image: url("/assets/img/workout-limitless-endurance-gym-colorful-smoke-3556x2000-929.jpg") !important;
     background-position: 0% 20%;
   }
+  .img-container {
+    width: 100%; /* Ensures the container takes full width of its parent */
+    height: 80vh; /* Adjust the height as needed */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+  }
   
+  .custom-img {
+    width: 90%; /* Ensures the image takes full width of its container */
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover; /* Maintains aspect ratio and covers the container */
+    object-position: top; /* Positions the image towards the top */
+  
+  }

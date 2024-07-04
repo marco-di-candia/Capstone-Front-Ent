@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CheckoutService {
-  private apiUrl = 'http://localhost:8080/api/checkout/process'; // Modifica l'URL con quello del tuo backend
+  private apiUrl = 'http://localhost:8080/api/checkout/process'; 
 
   constructor(private http: HttpClient) { }
 

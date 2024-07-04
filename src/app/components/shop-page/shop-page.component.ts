@@ -28,7 +28,7 @@ export class ShopPageComponent implements OnInit {
 
         // Inizializza il testo del pulsante e le classi per ogni prodotto
         this.arrayProduct.forEach(product => {
-          this.buttonTexts[product.id] = 'Add to Cart';
+          this.buttonTexts[product.id] = 'Aggiungi al Carrello';
           this.buttonClasses[product.id] = 'btn btn-primary bg-butt';
         });
       },
