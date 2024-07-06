@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -17,7 +17,6 @@ import { CheckoutComponentComponent } from './components/checkout-component/chec
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckoutSuccessModalComponent } from './components/checkout-success-modal/checkout-success-modal.component';
 import { WikimuscleComponent } from './components/wikimuscle/wikimuscle.component';
-
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -42,11 +41,10 @@ const routes: Route[] = [
     CheckoutComponentComponent,
     CheckoutSuccessModalComponent,
     WikimuscleComponent,
-
   ],
   imports: [
-    BrowserModule, // Make sure BrowserModule is imported here
-    ReactiveFormsModule, // Import ReactiveFormsModule for Reactive Forms
+    BrowserModule,
+    ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes),

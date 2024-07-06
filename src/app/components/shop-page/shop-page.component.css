@@ -28,3 +28,6 @@
     object-position: top; /* Positions the image towards the top */
   
   }
+  .alt{
+    height: 400px !important;
+  }

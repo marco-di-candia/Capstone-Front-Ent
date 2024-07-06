@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CheckoutService {
-  private apiUrl = 'http://localhost:8080/api/checkout/process'; 
+  private apiUrl = 'http://localhost:8080/api/checkout/process';
 
   constructor(private http: HttpClient) { }
 
   submitOrder(orderData: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, orderData);
+    return this.http.post(this.apiUrl, orderData, { responseType: 'text' });
   }
 }

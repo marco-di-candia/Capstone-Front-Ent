@@ -18,7 +18,7 @@ export class CheckoutComponentComponent implements OnInit {
     private fb: FormBuilder,
     private checkoutService: CheckoutService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -37,19 +37,16 @@ export class CheckoutComponentComponent implements OnInit {
 
   onSubmit(): void {
     if (this.form.valid) {
+      console.log('onSubmit called'); // Questo dovrebbe essere visibile nella console
       this.checkoutService.submitOrder(this.form.value).subscribe(
         (response) => {
           console.log('Order submitted successfully', response);
           this.successMessage = 'Order submitted successfully!';
-          setTimeout(() => {
-            this.successMessage = '';
-            this.router.navigate(['/thank-you']);
-          }, 3000);
+          this.router.navigate(['/confirmation']); // Reindirizza al componente checkout-success-modal
         },
         (error: HttpErrorResponse) => {
           console.error('Error submitting order', error);
-          this.errorMessage =
-            'There was an error submitting your order. Please try again.';
+          this.errorMessage = 'There was an error submitting your order. Please try again.';
           this.successMessage = '';
         }
       );
