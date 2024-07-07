@@ -7,3 +7,6 @@
     box-shadow: inset 7px 7px 100px #dcdcdc,
             inset -7px -7px 100px #e4e4e4;
   }
+  .w-90{
+    width: 90% !important;
+}

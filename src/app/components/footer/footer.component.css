@@ -1,0 +1,80 @@
+/* footer.component.css */
+.footer {
+    background: linear-gradient(to bottom, rgba(136, 41, 44, 0), #88292c);
+    color: #fff;
+    height: auto;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    border-top: none; /* Rimuovi il bordo superiore */
+  }
+  
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .footer-section h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section p {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section .contact span,
+  .footer-section .social-links a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section .social-links a {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  .footer-section .social-links a:hover {
+    color: #ddd;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer-section ul a:hover {
+    color: #ddd;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  

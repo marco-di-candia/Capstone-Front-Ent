@@ -31,3 +31,8 @@
   .alt{
     height: 400px !important;
   }
+  @media screen and (max-width: 768px) {
+    .img-container {
+        height: 50vh; /* Altezza ridotta a 50% della viewport height sui dispositivi mobili */
+    }
+  }

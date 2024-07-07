@@ -56,3 +56,18 @@
     pointer-events: none;
     opacity: 0.5;
 }
+@media screen and (max-width: 768px) {
+  .navbar-nav{
+    margin-left: 20px;
+  
+}
+}
+.b{
+    margin-bottom: 20px !important;
+}
+@media screen and (min-width: 769px) {
+    .b{
+        margin-bottom: 0px !important;
+    }
+ 
+}

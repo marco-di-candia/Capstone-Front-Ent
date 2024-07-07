@@ -17,6 +17,7 @@ import { CheckoutComponentComponent } from './components/checkout-component/chec
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckoutSuccessModalComponent } from './components/checkout-success-modal/checkout-success-modal.component';
 import { WikimuscleComponent } from './components/wikimuscle/wikimuscle.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -41,6 +42,7 @@ const routes: Route[] = [
     CheckoutComponentComponent,
     CheckoutSuccessModalComponent,
     WikimuscleComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SignUp } from 'src/app/interfaces/sign-up';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
@@ -10,7 +9,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent {
-  userReg!: SignUp;
+  errorMessage: string = '';
 
   constructor(private authSrv: AuthService, private router: Router) {}
 
@@ -18,12 +17,17 @@ export class SignupComponent {
     console.log(form.value);
     this.authSrv.signup(form.value).subscribe(
       (response) => {
-        alert("Registrazione effettuata")
+        alert('Registrazione effettuata con successo!');
         console.log(response);
         this.router.navigate(['/login']);
       },
       (error) => {
-        console.error(error);
+        console.error('Errore durante la registrazione:', error);
+        if (error.error && error.error.messaggio) {
+          this.errorMessage = error.error.messaggio;
+        } else {
+          this.errorMessage = 'Si è verificato un errore durante la registrazione.';
+        }
       }
     );
   }

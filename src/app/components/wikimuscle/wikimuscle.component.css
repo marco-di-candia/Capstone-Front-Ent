@@ -138,3 +138,11 @@ iframe{
   height: 200px;
   width: 350px;
 }
+@media screen and (max-width: 768px) {
+  .img-container {
+      height: 50vh; /* Altezza ridotta a 50% della viewport height sui dispositivi mobili */
+  }
+  .margin-mobile{
+    margin-bottom: 20px;
+  }
+}

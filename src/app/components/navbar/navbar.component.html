@@ -7,7 +7,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse pb" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link color-text" aria-current="page" [routerLink]="['/']" routerLinkActive="active"
@@ -20,21 +20,22 @@
                     <a [class.disabled]="!user" class="nav-link color-text" [routerLink]="user ? ['/WikiMuscle'] : null" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">WikiMuscle</a>
                 </li>
             </ul>
+            <!-- Middle-aligned items -->
+            <div class="d-flex mx-auto">
+                
+            </div>
+    
+            <!-- Right-aligned items -->
+            <div class="d-flex">
+                <p *ngIf="user" class="color-text-1 mx-3 mt-3"><i class="bi bi-person-circle pt-4"></i>&nbsp;{{ user.user.name }}</p>
+                <a *ngIf="user" class="nav-link color-text" [routerLink]="['/cart']" routerLinkActive="active">
+                    <i class="bi bi-cart"></i> Carello
+                </a>
+                <button *ngIf="user" type="button" class="btn btn-sm btn-outline-dark ms-3 p-1 px-2 rounded-4" (click)="logout()">LOGOUT</button>
+                <a *ngIf="!user" class="btn btn-outline-dark rounded-4 ms-3 p-2 px-3 rounded-4 b" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+                <a *ngIf="!user" class="btn btn-outline-dark rounded-4 ms-3 p-2 px-3 rounded-4 b" [routerLink]="['/signup']" routerLinkActive="active">Registrati</a>
+            </div>
         </div>
 
-        <!-- Middle-aligned items -->
-        <div class="d-flex align-items-center mx-auto">
-            <p *ngIf="user" class="color-text-1 mx-3 mt-3"><i class="bi bi-person-circle pt-4"></i>&nbsp;{{ user.user.name }}</p>
-            <a *ngIf="user" class="nav-link color-text" [routerLink]="['/cart']" routerLinkActive="active">
-                <i class="bi bi-cart"></i> Carello
-            </a>
-        </div>
-
-        <!-- Right-aligned items -->
-        <div class="d-flex">
-            <button *ngIf="user" type="button" class="btn btn-sm btn-outline-dark ms-3 p-1 px-2 rounded-4" (click)="logout()">LOGOUT</button>
-            <a *ngIf="!user" class="btn btn-outline-dark rounded-4 ms-3 p-2 px-3 rounded-4" [routerLink]="['/login']" routerLinkActive="active">Login</a>
-            <a *ngIf="!user" class="btn btn-outline-dark rounded-4 ms-3 p-2 px-3 rounded-4" [routerLink]="['/signup']" routerLinkActive="active">Registrati</a>
-        </div>
     </div>
 </nav>
