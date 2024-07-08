@@ -24,25 +24,25 @@ export class ProductService {
   }
 
   addToCart(product: Product): Observable<CartItem[]> {
-    // Check if the product already exists in the cart
+   
     const existingCartItem = this.cart.find(item => item.id === product.id);
 
     if (existingCartItem) {
-      // If exists, update the quantity
+      
       existingCartItem.amount++;
       return this.http.put<CartItem[]>(`${this.apiURL}/shops/${existingCartItem.id}`, existingCartItem);
     } else {
-      // Otherwise, add as a new item in the cart
+     
       const newCartItem: CartItem = {
       id: product.id,
       name: product.name,
       amount: 1,
       price: product.price,
       imageUrl: product.imageUrl,
-      // Aggiungi le proprietà mancanti con valori di default o null
+     
       totalPrice: product.price,
-      description: '', // Esempio di stringa vuota
-      categoria: "",// Esempio di array vuoto
+      description: '', 
+      categoria: "",
       };
       
       return this.http.post<CartItem[]>(`${this.apiURL}/shops`, newCartItem);

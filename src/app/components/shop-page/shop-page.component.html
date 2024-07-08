@@ -6,16 +6,16 @@
   <h2 class="text-white mb-4 text-center">Prodotti</h2>
   <div class="row ">
     <div *ngFor="let product of arrayProduct" class="col-md-4">
-      <div class="card mb-4 shadow-sm rounded-5 alt">
+      <div class="card mb-4 shadow-sm rounded-5 alt ">
         <img [src]="product.imageUrl" class="card-img-top img-fluid product-img rounded-5" alt="{{ product.name }}">
-        <div class="card-body">
+        <div class="card-body pb-5">
           <h5 class="card-title">{{ product.name }}</h5>
           <p class="card-text">{{ product.description }}</p>
           <p class="card-text"><strong>Prezzo: ${{ product.price }}</strong></p>
+          
           <div class="text-center" >
             <button (click)="addToCart(product)" [class]="buttonClasses[product.id]">{{ buttonTexts[product.id] }}</button>
           </div>
-          
         </div>
       </div>
     </div>

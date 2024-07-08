@@ -1,7 +1,7 @@
 .product-img {
     max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
     height: auto; /* Mantiene le proporzioni dell'immagine */
-    max-height: 200px; /* Imposta l'altezza massima dell'immagine */
+    max-height: 150px; /* Imposta l'altezza massima dell'immagine */
     object-fit: contain;
     width: 80%;
     margin: 0 auto; 

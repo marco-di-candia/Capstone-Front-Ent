@@ -76,7 +76,7 @@ export class ShopPageComponent implements OnInit {
   }
 
   resetButton(productId: number): void {
-    this.buttonTexts[productId] = 'Add to Cart'; // Ripristina il testo del pulsante per il prodotto specificato
+    this.buttonTexts[productId] = 'Aggiungi al Carrello'; // Ripristina il testo del pulsante per il prodotto specificato
     this.buttonClasses[productId] = 'btn btn-primary bg-butt'; // Ripristina il colore del pulsante per il prodotto specificato
   }
 }

@@ -22,11 +22,11 @@ export class LoginComponent {
 
     this.authSrv.login(form.value).pipe(
       catchError(error => {
-        this.errorMessage = 'Invalid email or password'; // Set error message
+        this.errorMessage = 'Invalid email or password'; 
         return throwError(error);
       })
     ).subscribe(response => {
-      // Redirect to home page on successful login
+     
       this.router.navigate(['/']);
     });
   }

@@ -1,4 +1,3 @@
-// auth.service.ts
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
@@ -18,7 +17,7 @@ export class AuthService {
   timeout: any;
 
   constructor(private http: HttpClient, private router: Router) {
-    this.restore(); // Restore authentication on service load
+    this.restore(); 
   }
 
   signup(data: SignUp) {
@@ -32,7 +31,7 @@ export class AuthService {
         this.authSub.next(data);
         localStorage.setItem('user', JSON.stringify(data));
         this.autologout(data);
-        this.router.navigate(['/']); // Navigate to home page after login
+        this.router.navigate(['/']); 
       }),
       catchError(this.errors)
     );
